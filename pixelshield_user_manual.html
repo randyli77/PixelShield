@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>PixelShield 用户手册 (FAQ)</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        @page {
+            size: A4;
+            margin: 20mm 15mm;
+            background-color: #f4f6f9;
+            @bottom-right {
+                content: "Page " counter(page) " of " counter(pages);
+                font-family: 'Helvetica Neue', Arial, sans-serif;
+                font-size: 9pt;
+                color: #7f8c8d;
+            }
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            color: #2c3e50;
+            background-color: #f4f6f9;
+            line-height: 1.6;
+            font-size: 10.5pt;
+        }
+        .header-banner {
+            background-color: #1a237e;
+            color: #ffffff;
+            padding: 25px 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .header-banner h1 {
+            margin: 0;
+            font-size: 20pt;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .header-banner p {
+            margin: 5px 0 0 0;
+            font-size: 10pt;
+            color: #9fa8da;
+        }
+        .faq-container {
+            margin-bottom: 20px;
+        }
+        .faq-item {
+            background-color: #ffffff;
+            border-radius: 6px;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            border-left: 5px solid #1a237e;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            page-break-inside: avoid;
+        }
+        .faq-question {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 8px;
+        }
+        .faq-answer {
+            color: #34495e;
+            margin: 0;
+        }
+        .faq-answer strong {
+            color: #2c3e50;
+        }
+        .faq-answer ul {
+            margin: 8px 0 0 0;
+            padding-left: 20px;
+        }
+        .faq-answer li {
+            margin-bottom: 6px;
+        }
+        .footer-note {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 9pt;
+            margin-top: 30px;
+            border-top: 1px dashed #bdc3c7;
+            padding-top: 15px;
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-banner">
+        <h1>🛡️ PixelShield 用户手册 (FAQ)</h1>
+        <p>安全 · 离线 · 专业原创存证工具 | 版本 v2.0 Beta</p>
+    </div>
+
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">Q1. 什么是原创水印（DWT 水印）？</div>
+            <div class="faq-answer">
+                <strong>答：</strong> 它是植入在照片像素深处的<strong>“数字烙印”</strong>。<br>
+                PixelShield 采用先进的“离散小波变换（DWT）”算法，不改变照片的视觉外观，但会在肉眼看不见的色彩频率中写入你的专属签名。这种水印<strong>极难被肉眼察觉</strong>，且具备很强的抗破坏能力，即使照片被他人恶意截图或轻度压缩，原创签名依然可以被精准提取。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q2. 什么是原创指纹（SHA-256 哈希值）？</div>
+            <div class="faq-answer">
+                <strong>答：</strong> 它是照片的<strong>“数字身份证/指纹”</strong>。<br>
+                SHA-256 是一种国际标准的密码学算法。任何一张照片，只要内容发生哪怕是一个像素、一个字节的轻微改动，它算出来的指纹就会<strong>完全彻底地改变</strong>。在法庭或维权争议中，这个指纹是证明你的原始证据“未被任何人篡改或调包”的关键铁证。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q3. 为什么在手机相册或电脑上看照片，完全找不到水印？</div>
+            <div class="faq-answer">
+                <strong>答：</strong> <strong>这正是 PixelShield 的专业之处。</strong><br>
+                传统的水印会破坏画面美感，且极易被他人用去水印软件抹除。PixelShield 的水印是“隐形”的，它完全融于图像的数学特征中。你想查看水印时，只需将其导入本应用的“验证原创印记”页面，即可像扫描显形墨水一样，将你的签名提取出来。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q4. 什么是设备防伪绑定码？</div>
+            <div class="faq-answer">
+                <strong>答：</strong> 它是这台手机的**“硬件防伪码”**。<br>
+                该编码基于你当前手机的品牌、型号、底层硬件 ID 经由安全算法生成（不包含手机号、姓名等任何个人隐私）。在导出的存证报告中包含此码，是为了证明：<strong>“这张照片就是在当前这台特定手机上加固生成的”</strong>，能够彻底斩断他人伪造存证报告或跨设备冒充的可能。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q5. 存证数据存在哪里？如果我删了相册里的原图，档案库会失效吗？</div>
+            <div class="faq-answer">
+                <strong>答：</strong><br>
+                1. <strong>数据存放</strong>：PixelShield 是一款<strong>纯本地、全离线</strong>的工具，所有存证记录（签名、时间、指纹）都保存在你手机内部的加密数据库中，绝不联网，绝不上传。<br>
+                2. <strong>原图删除的影响</strong>：<strong>存证不会失效。</strong> 存证的核心是那张“加固后的照片”。只要加固后的照片还在，你的版权凭证就 100% 完好。此时即使你删除了相册里的原始照片，你也依然可以照常进行“双重验证”。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q6. 如何使用“导出”功能？导出的文件该怎么用？</div>
+            <div class="faq-answer">
+                <strong>答：</strong> 针对不同场景，我们提供了两种最符合直觉的导出方式：
+                <ul>
+                    <li><strong>本机留档（详情页导出）</strong>：在存证详情页点击“导出”，系统会把【加固照片.jpg】和【存证报告.txt】作为两个独立文件直接保存到手机的 <code>Download/PixelShield_Export</code> 文件夹中，方便你随时在文件管理器中查看。</li>
+                    <li><strong>外发维权（列表页导出）</strong>：在存证列表页，点击记录右侧的菜单并选择“导出存证包”，系统会自动将图片和文字报告打包成一个专业的 <code>.zip</code> 证据包并调起分享，你可以直接通过微信、邮件发送给律师、法官或内容审核平台。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        本应用无网络权限，数据 100% 本地留存。更多支持内容请联系 dolpan@126.com
+    </div>
+
+</body>
+</html>
