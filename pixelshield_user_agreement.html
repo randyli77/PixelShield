@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>PixelShield 用户协议</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        @page {
+            size: A4;
+            margin: 20mm 15mm;
+            background-color: #fbfbfc;
+            @bottom-right {
+                content: "Page " counter(page) " of " counter(pages);
+                font-family: 'Helvetica Neue', Arial, sans-serif;
+                font-size: 9pt;
+                color: #a6b2b7;
+            }
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            color: #2c3e50;
+            background-color: #fbfbfc;
+            line-height: 1.6;
+            font-size: 10.5pt;
+        }
+        .header-banner {
+            background-color: #34495e;
+            color: #ffffff;
+            padding: 25px 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            border-left: 6px solid #e67e22;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+        }
+        .header-banner h1 {
+            margin: 0;
+            font-size: 19pt;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .header-banner p {
+            margin: 6px 0 0 0;
+            font-size: 9.5pt;
+            color: #bdc3c7;
+        }
+        .notice-box {
+            background-color: #fdf2e9;
+            border: 1px solid #fadbd8;
+            border-left: 5px solid #e67e22;
+            color: #d35400;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+            font-size: 10pt;
+        }
+        .notice-box strong {
+            font-size: 11pt;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .section {
+            background-color: #ffffff;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 18px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+            page-break-inside: avoid;
+        }
+        .section-title {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 6px;
+        }
+        .section-content {
+            color: #34495e;
+            margin: 0;
+            text-align: justify;
+        }
+        .section-content p {
+            margin: 0 0 10px 0;
+        }
+        .section-content p:last-child {
+            margin-bottom: 0;
+        }
+        .section-content ul {
+            margin: 6px 0 0 0;
+            padding-left: 20px;
+        }
+        .section-content li {
+            margin-bottom: 6px;
+        }
+        .warning-text {
+            color: #c0392b;
+            font-weight: bold;
+        }
+        .footer-note {
+            text-align: center;
+            color: #95a5a6;
+            font-size: 9pt;
+            margin-top: 35px;
+            border-top: 1px dashed #d5dbdb;
+            padding-top: 15px;
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-banner">
+        <h1>🛡️ PixelShield 用户协议</h1>
+        <p>欢迎使用 PixelShield 离线安全存证工具 | 版本生效日期：2026年5月</p>
+    </div>
+
+    <div class="notice-box">
+        <strong>一、特别提示</strong>
+        在此特别提醒用户（以下简称“您”），在安装、使用“PixelShield”软件（以下简称“本软件”）之前，请周详阅读本《用户协议》（以下简称“协议”）。如果您不同意本协议的任何内容，请立即停止使用本软件。当您开始实际使用本软件时，即视为您已充分阅读并接受本协议的所有条款。
+    </div>
+
+    <div class="section">
+        <div class="section-title">二、服务内容与授权</div>
+        <div class="section-content">
+            <p>1. 本软件是一款<strong>全离线、纯本地</strong>运行的数字原创存证与图片防伪加固工具。其核心功能包括基于离线小波变换（DWT）的隐形水印植入、数字指纹（SHA-256）计算、本地档案库管理及原创印记检测验证。</p>
+            <p>2. 本公司/开发者授予您一项个人的、不可转让及非独占的许可，以使用本软件。您仅能为非商业目的（或在符合法律法规的前提下作为个人维权辅助工具）在移动终端设备上安装、使用、显示、运行本软件。</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">三、用户行为规范</div>
+        <div class="section-content">
+            <p>1. 您承诺并保证，使用本软件处理的图片具有合法的著作权或已获得合法授权。您不得利用本软件为侵权图片、虚假证据或违反法律法规的内容进行“加固”或“存证”。</p>
+            <p>2. 您不得对本软件进行反向工程、反向汇编、反向编译，或以其他方式尝试发现本软件核心算法（包括 C++ 图像处理底层）的源代码。</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">四、知识产权与数据所有权</div>
+        <div class="section-content">
+            <p>1. 本软件的一切著作权、商标权、专利权等知识产权，均由本公司/开发者所有。</p>
+            <p>2. <strong>数据所有权归属</strong>：您在使用本软件过程中产生的全部数据（包括但不限于原始照片、加固照片、SQLite 数据库记录、验证历史日志）<strong>100% 存储于您的本地设备中，所有权完全归您所有</strong>，本公司/开发者不拥有、亦无法访问这些数据。</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">五、核心免责声明（重要条款）</div>
+        <div class="section-content">
+            <ul>
+                <li><span class="warning-text">技术局限性免责</span>：您理解并同意，数字水印的提取与防伪验证依赖于图像像素的完整性。若加固后的照片遭受了<strong>极端压缩、恶意大范围涂抹、低分辨率截图或多次多平台转发破坏</strong>，可能导致算法无法成功提取出隐形签名。本软件对因图像遭受过度物理破坏而导致的验证失败不承担任何技术或法律责任。</li>
+                <li><span class="warning-text">法律证据效力免责</span>：本软件提供的本地存证报告和指纹校验，属于技术性的辅助自证手段。最终证据能否被法院、仲裁机构或平台采信，取决于相关法律法规及裁判人员的独立判断，本软件不承诺亦不保证存证包具有绝对的司法法定证据效力。</li>
+                <li><span class="warning-text">数据安全自负责任</span>：鉴于本软件采用纯本地存储模式，<strong>无云端备份功能</strong>。若您通过系统设置清空应用数据、重置档案库或直接卸载本软件，所有本地存证记录及关联日志将永久丢失。由于用户自身操作导致的物理照片丢失或记录误删，本软件不承担数据恢复责任。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">六、协议的变更与终止</div>
+        <div class="section-content">
+            本公司/开发者有权根据法律法规或技术调整修改本协议。修改后的协议一经公布即替代原协议。若您继续使用本软件，即表示您接受修改后的协议。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">七、法律管辖</div>
+        <div class="section-content">
+            <p>1. 本协议的订立、执行和解释及争议的解决均应适用中华人民共和国法律。</p>
+            <p>2. 如双方就本协议内容或其执行发生任何争议，双方应尽量友好协商解决；协商不成时，任何一方均可向本公司/开发者所在地有管辖权的人民法院提起诉讼。</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">八、联系方式</div>
+        <div class="section-content">
+            如果您对本协议有任何疑问，请通过以下官方邮箱联系我们：<br>
+            • 联系邮箱：<code>dolpan@126.com</code>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        感谢您信任 PixelShield。我们将竭诚为您提供安全的本地防伪技术支持。
+    </div>
+
+</body>
+</html>

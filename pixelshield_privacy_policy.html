@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>PixelShield 隐私声明</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        @page {
+            size: A4;
+            margin: 20mm 15mm;
+            background-color: #fafbfd;
+            @bottom-right {
+                content: "Page " counter(page) " of " counter(pages);
+                font-family: 'Helvetica Neue', Arial, sans-serif;
+                font-size: 9pt;
+                color: #95a5a6;
+            }
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            color: #2c3e50;
+            background-color: #fafbfd;
+            line-height: 1.6;
+            font-size: 10.5pt;
+        }
+        .header-banner {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 25px 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            border-left: 6px solid #16a085;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+        }
+        .header-banner h1 {
+            margin: 0;
+            font-size: 19pt;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .header-banner p {
+            margin: 6px 0 0 0;
+            font-size: 9.5pt;
+            color: #bdc3c7;
+        }
+        .highlight-box {
+            background-color: #e8f8f5;
+            border: 1px solid #a3e4d7;
+            border-left: 5px solid #16a085;
+            color: #16a085;
+            padding: 12px 15px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+            font-weight: bold;
+            font-size: 11pt;
+        }
+        .section {
+            background-color: #ffffff;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 18px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+            page-break-inside: avoid;
+        }
+        .section-title {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 6px;
+        }
+        .section-content {
+            color: #34495e;
+            margin: 0;
+        }
+        .section-content ul {
+            margin: 6px 0 0 0;
+            padding-left: 20px;
+        }
+        .section-content li {
+            margin-bottom: 6px;
+        }
+        .footer-note {
+            text-align: center;
+            color: #95a5a6;
+            font-size: 9pt;
+            margin-top: 35px;
+            border-top: 1px dashed #d5dbdb;
+            padding-top: 15px;
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-banner">
+        <h1>🛡️ PixelShield 隐私声明</h1>
+        <p>安全可靠的离线存证保护 | 最后更新：2026年5月</p>
+    </div>
+
+    <div class="highlight-box">
+        【零网络权限 · 零数据上传】<br>
+        ⚡ PixelShield 在设计上不申请任何网络访问权限。您的图片、存证数据、设备信息等所有隐私内容 100% 保存在本地设备，绝对不会被上传至任何服务器，开发者亦不保留任何副本。
+    </div>
+
+    <div class="section">
+        <div class="section-title">一、我们收集什么数据？</div>
+        <div class="section-content">
+            <strong>不收集任何个人信息。</strong> PixelShield 不提供用户注册或登录功能，不要求提供姓名、电话或电子邮箱。应用不集成任何联网能力的第三方广告、统计、追踪或推送类 SDK，不含任何数据采集、分析或崩溃上报模块。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">二、数据存储与管理</div>
+        <div class="section-content">
+            <ul>
+                <li><strong>本地存储</strong>：所有存证记录、验证历史均存储于设备本地的私有 SQLite 数据库（<code>pixel_shield.db</code>）中。加固后的图片和导出的存证包，存储于设备公共存储中您授权的目录（<code>Download/PixelShield_Export</code>）。</li>
+                <li><strong>跨境传输</strong>：所有数据均存储在用户本地设备，不进行任何云端传输或跨境传输。</li>
+                <li><strong>数据销毁</strong>：用户如需撤回对本隐私声明的授权或清除数据，可通过在设置页点击“重置存证记录”或直接<strong>卸载本应用</strong>的方式实现。卸载后，系统将自动清除您在本地私有沙盒里的所有相关存证数据。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">三、权限说明</div>
+        <div class="section-content">
+            本应用奉行“权限最小化”原则，仅在用户主动触发相应操作时请求以下系统基本权限：
+            <ul>
+                <li><strong>相册/媒体库读写权限</strong>：用于选取待加固的原始图片，以及保存加固后的图片。</li>
+                <li><strong>存储访问权限（若系统需要）</strong>：用于将 <code>.zip</code> 证据包和文本报告导出至手机的公共下载目录。</li>
+            </ul>
+            <br>
+            以上权限均在本地执行，绝对不涉及、亦无法进行任何网络传输。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">四、对未成年人的保护</div>
+        <div class="section-content">
+            本应用不收集个人信息，也不针对未成年人提供特殊功能。若未成年人使用本应用，请在家长或监护人指导下操作。
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">五、联系我们</div>
+        <div class="section-content">
+            如对本隐私声明有任何疑问、意见或建议，可通过设置页展示的官方意见反馈邮箱（<code>dolpan@126.com</code>）与我们联系。
+        </div>
+    </div>
+
+    <div class="footer-note">
+        本应用基于全离线架构设计。数据所有权 100% 归属于您。
+    </div>
+
+</body>
+</html>
