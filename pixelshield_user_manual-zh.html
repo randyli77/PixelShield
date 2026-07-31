@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>像素盾（PixelShield） 用户手册 (FAQ)</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        @page {
+            size: A4;
+            margin: 20mm 15mm;
+            background-color: #f4f6f9;
+            @bottom-right {
+                content: "Page " counter(page) " of " counter(pages);
+                font-family: 'Helvetica Neue', Arial, sans-serif;
+                font-size: 9pt;
+                color: #7f8c8d;
+            }
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            color: #2c3e50;
+            background-color: #f4f6f9;
+            line-height: 1.6;
+            font-size: 10.5pt;
+        }
+        .header-banner {
+            background-color: #1a237e;
+            color: #ffffff;
+            padding: 25px 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .header-banner h1 {
+            margin: 0;
+            font-size: 20pt;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .header-banner p {
+            margin: 5px 0 0 0;
+            font-size: 10pt;
+            color: #9fa8da;
+        }
+        .faq-container {
+            margin-bottom: 20px;
+        }
+        .faq-item {
+            background-color: #ffffff;
+            border-radius: 6px;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            border-left: 5px solid #1a237e;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            page-break-inside: avoid;
+        }
+        .faq-question {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 8px;
+        }
+        .faq-answer {
+            color: #34495e;
+            margin: 0;
+        }
+        .faq-answer strong {
+            color: #2c3e50;
+        }
+        .faq-answer ul {
+            margin: 8px 0 0 0;
+            padding-left: 20px;
+        }
+        .faq-answer li {
+            margin-bottom: 6px;
+        }
+        .footer-note {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 9pt;
+            margin-top: 30px;
+            border-top: 1px dashed #bdc3c7;
+            padding-top: 15px;
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-banner">
+        <h1>🛡️ 像素盾（PixelShield）用户手册（FAQ）</h1>
+        <p>安全 · 离线 · 专业原创存证工具 | 版本 v2.0 Beta</p>
+    </div>
+
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">Q1. 什么是原创水印（隐形数字水印）？</div>
+            <div class="faq-answer">
+                <strong>答：</strong><br>
+                它是植入在照片像素数据中的<strong>“数字烙印”</strong>。<br>
+                PixelShield 采用基于图像像素特征和数字信号处理技术的隐形水印算法，在不影响照片正常视觉效果的情况下，将你的专属签名信息嵌入图片数据中。<br>
+                这种水印不会显示在普通图片浏览中，用户可以通过本应用的“验证原创印记”功能进行检测和提取，用于辅助验证图片来源和完整性。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q2. 什么是原创指纹（SHA-256 哈希值）？</div>
+            <div class="faq-answer">
+                <strong>答：</strong><br>
+                它是照片文件的<strong>“数字指纹”</strong>。<br>
+                SHA-256 是一种国际标准的密码学哈希算法，用于生成文件内容对应的唯一校验值。<br>
+                当同一个文件内容发生变化时，例如图片数据被修改，文件哈希值会发生变化。因此，SHA-256 可用于验证文件是否保持原始完整状态。<br>
+                需要注意的是，如果图片经过重新压缩、尺寸调整、格式转换或重新编码，即使视觉内容相同，文件哈希值也可能发生变化。<br>
+                在文件完整性验证场景中，该指纹信息可作为辅助验证依据。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q3. 为什么在手机相册或电脑上看照片，完全找不到水印？</div>
+            <div class="faq-answer">
+                <strong>答：</strong><br>
+                <strong>这正是 PixelShield 隐形水印技术的特点。</strong><br>
+                传统可见水印会影响图片视觉效果，并且容易影响用户使用体验。PixelShield 的水印信息嵌入于图片数据特征中，普通图片查看工具无法直接看到。<br>
+                当需要验证时，只需将图片导入本应用的“验证原创印记”页面，即可检测并提取对应的水印信息，用于辅助确认图片来源。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q4. 什么是设备绑定验证信息？</div>
+            <div class="faq-answer">
+                <strong>答：</strong><br>
+                设备绑定信息是一种本地生成的验证辅助信息。<br>
+                PixelShield 会在用户执行证据导出功能时，根据当前设备提供的部分系统信息，通过安全算法生成设备绑定验证信息。<br>
+                <strong>该信息不包含手机号、姓名等个人身份信息，也不会上传至服务器。</strong><br>
+                在导出的存证报告中包含此信息，可以用于增强存证文件的完整性验证能力，提高跨设备伪造存证报告的难度。<br>
+                需要说明的是，设备绑定信息用于辅助验证，并不代表对设备或用户身份进行追踪。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q5. 存证数据存在哪里？如果我删了相册里的原图，档案库会失效吗？</div>
+            <div class="faq-answer">
+                <strong>答：</strong><br><br>
+                1. <strong>数据存放</strong><br>
+                PixelShield 是一款<strong>纯本地、全离线</strong>的工具。<br>
+                所有存证记录（包括签名信息、创建时间、文件指纹等）均保存在手机本地数据库中，不上传至任何服务器。<br>
+                图片处理、元数据处理以及存证生成过程均在设备本地完成。<br>
+                此外，PixelShield 支持处理图片中的 EXIF 等元数据信息，例如拍摄时间、设备信息、GPS 位置信息等隐私内容，相关处理均在本地执行。<br><br>
+                2. <strong>原图删除的影响</strong><br>
+                如果删除了相册中的原始图片，是否影响存证取决于设备中是否仍保存对应的加固图片和存证记录。<br>
+                PixelShield 的存证信息主要用于辅助验证文件来源和完整性。<br>
+                建议用户<strong>妥善保存加固后的图片以及相关存证报告</strong>，以便后续查看和验证。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q6. 如何使用“导出”功能？导出的文件该怎么用？</div>
+            <div class="faq-answer">
+                <strong>答：</strong><br>
+                针对不同使用场景，PixelShield 提供两种导出方式：<br><br>
+                1. <strong>本机留档（详情页导出）</strong><br>
+                在存证详情页点击“导出”，系统会生成：
+                <ul>
+                    <li>【加固后的图片文件】</li>
+                    <li>【存证报告.txt】</li>
+                </ul>
+                两个独立文件，并保存至手机：<code>Download/PixelShield_Export</code><br>
+                方便用户在文件管理器中查看和保存。<br>
+                存证报告可能包含设备绑定验证信息，用于增强文件完整性验证能力。<br><br>
+                2. <strong>外发维权（列表页导出）</strong><br>
+                在存证列表页选择对应记录，并点击“导出存证包”。<br>
+                系统会自动生成一个 <code>.zip</code> 证据包，其中包含：
+                <ul>
+                    <li>加固后的图片；</li>
+                    <li>存证报告。</li>
+                </ul>
+                随后系统会调用设备分享功能，用户可以根据需要发送给律师、内容审核平台或其他指定对象。
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        PixelShield 不提供云端存储服务，无网络上传功能，所有图片处理和存证生成均在用户设备本地完成。<br>
+        更多支持内容请联系：dolpan@126.com
+    </div>
+
+</body>
+</html>
