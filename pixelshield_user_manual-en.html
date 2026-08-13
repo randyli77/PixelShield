@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>PixelShield User Manual (FAQ)</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        @page {
+            size: A4;
+            margin: 20mm 15mm;
+            background-color: #f4f6f9;
+            @bottom-right {
+                content: "Page " counter(page) " of " counter(pages);
+                font-family: 'Helvetica Neue', Arial, sans-serif;
+                font-size: 9pt;
+                color: #7f8c8d;
+            }
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            color: #2c3e50;
+            background-color: #f4f6f9;
+            line-height: 1.6;
+            font-size: 10.5pt;
+        }
+        .header-banner {
+            background-color: #1a237e;
+            color: #ffffff;
+            padding: 25px 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .header-banner h1 {
+            margin: 0;
+            font-size: 20pt;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .header-banner p {
+            margin: 5px 0 0 0;
+            font-size: 10pt;
+            color: #9fa8da;
+        }
+        .faq-container {
+            margin-bottom: 20px;
+        }
+        .faq-item {
+            background-color: #ffffff;
+            border-radius: 6px;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            border-left: 5px solid #1a237e;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            page-break-inside: avoid;
+        }
+        .faq-question {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 8px;
+        }
+        .faq-answer {
+            color: #34495e;
+            margin: 0;
+        }
+        .faq-answer strong {
+            color: #2c3e50;
+        }
+        .faq-answer ul {
+            margin: 8px 0 0 0;
+            padding-left: 20px;
+        }
+        .faq-answer li {
+            margin-bottom: 6px;
+        }
+        .footer-note {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 9pt;
+            margin-top: 30px;
+            border-top: 1px dashed #bdc3c7;
+            padding-top: 15px;
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-banner">
+        <h1>🛡️ PixelShield User Manual（FAQ）</h1>
+        <p>Safe · Offline · Professional Copyright Protection & Verification Tool | Version v1.0</p>
+    </div>
+
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">Q1. What is an Invisible Watermark?</div>
+            <div class="faq-answer">
+                <strong>Answer: </strong><br>
+                It's a <strong>'digital stamp'</strong> embedded in the photo's pixel data.  <br>
+                PixelShield uses an invisible watermarking algorithm based on image pixel features and digital signal processing technology. It embeds your unique signature into the image data without affecting the normal visual appearance of the photo.  <br>
+                This watermark won't show up in regular image viewing. Users can detect and extract it through the app's 'Verify Invisible Watermark' feature to help verify the source and integrity of the photo.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q2. What is a SHA-256 file hash?</div>
+            <div class="faq-answer">
+                <strong>Answer:</strong><br>
+                It's the <strong> "file hash" </strong> of a photo file.  <br>
+                SHA-256 is an internationally standard cryptographic hash algorithm used to generate a unique checksum corresponding to a file's content.  <br>
+                When the content of the same file changes, for example if the image data is modified, the file's hash value will change. So, SHA-256 can be used to verify whether a file remains intact.  <br>
+                It's worth noting that if the image is recompressed, resized, converted to another format, or re-encoded, the file hash may change even if the visual content looks the same. <br>
+                In file integrity verification scenarios, this hash value can serve as a supplementary verification reference.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q3. Why can't I see any watermark when looking at photos on my phone gallery or computer?</div>
+            <div class="faq-answer">
+                <strong>Answer:</strong><br>
+                <strong>This is exactly the feature of PixelShield's invisible watermark technology. </strong><br>
+                Traditional visible watermarks can affect the visual quality of images and easily impact user experience. PixelShield embeds watermark information into the image's data features, so regular image viewing tools can't see it directly. <br>
+                When you need to verify, just import the image into this app's 'Verify Invisible Watermark' page, and it will detect and extract the corresponding watermark information to help confirm the image's source.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q4. What is Device Binding information?</div>
+            <div class="faq-answer">
+                <strong>Answer:</strong><br>
+                Device Binding information is technical verification information generated locally to support file integrity verification. <br>
+                PixelShield generates this Device Binding information when you export a Verification Package, using certain system information from the current device and a secure algorithm. <br>
+                <strong>This info doesn't include personal identifiers like phone numbers or names, and it's not uploaded to any server. </strong><br>
+                The exported Verification Report contains this info, which can help strengthen the integrity verification of the evidence file and make it harder to fake reports across devices. <br>
+                It''s worth noting that device binding information is just for verification support and doesn't mean tracking the device or the user.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q5. Where are Verification Records stored? If I delete the original photos from my gallery, will the Verification Record become invalid?</div>
+            <div class="faq-answer">
+                <strong>Answer:</strong><br><br>
+                1. <strong>Data Storage</strong><br>
+                PixelShield is a <strong>fully local, offline </strong>tool。<br>
+                All Verification Records (including signature information, creation time, file hashs, etc.) are stored in the local database on your phone and are not uploaded to any server. <br>
+               Image processing, metadata handling, and the creation of Verification Records all happen locally on the device. <br>
+                Additionally, PixelShield can handle metadata like EXIF in images, such as shooting time, device info, GPS location, and other private details, all of which are processed on your device.<br><br>
+                2. <strong>Impact of Deleting the Original Image</strong><br>
+                If you delete the original pictures from the album, whether it affects the certificate depends on whether the corresponding Protected Images and Verification Records are still saved on the device.<br>
+                The Verification information from PixelShield is mainly used to help verify the source and integrity of files.<br>
+                It's recommended that users <strong> properly save the Protected Images and related Verification Reports </strong> for future viewing and verification.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q6. How do I use the 'Export' feature? What should I do with the exported files?</div>
+            <div class="faq-answer">
+                <strong>Answer:</strong><br>
+               For different use cases, PixelShield offers two export methods:<br><br>
+                1. <strong>Local Backup (Export from Details Page)</strong><br>
+                On the record details page, click "Export" and the system will generate:
+                <ul>
+                    <li>[Protected Image File]</li>
+                    <li>[Verification Report.txt]</li>
+                </ul>
+                Two separate files will be saved on your phone at: <code>Download/PixelShield_Export</code><br>
+                So users can easily view and save them in the file manager.<br>
+                The Verification Report may include device binding verification information to help enhance file integrity verification.<br><br>
+                2. <strong>External Rights Protection (Export from Records Page)</strong><br>
+                On the records list page, select the corresponding record and click 'Export Verification Package.'<br>
+                The system will automatically generate a <code>.zip</code> Verification Package, which includes:
+                <ul>
+                    <li>Protected Images;</li>
+                    <li>Verification Report.</li>
+                </ul>
+                Then the system will call up the device's sharing feature, and users can send it to a lawyer, content review platform, or other designated recipients as needed.
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        PixelShield doesn’t offer cloud storage services and has no online upload feature. All image processing and Verification Record generation are performed locally on the user's device.。<br>
+        For more support, please contact: <a href="mailto:randyli1029@gmail.com">randyli1029@gmail.com</a>
+    </div>
+
+</body>
+</html>
